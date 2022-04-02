@@ -4,14 +4,14 @@ from selenium.webdriver.common.by import By
 
 import pandas as pd
 
-navegador = webdriver.Chrome()
+navegador = webdriver.Chrome(executable_path='chromedriver.exe')
 
 navegador.get("https://blaze.com/pt/games/crash")
 
 
 #ultimas rodadas
 last_play = navegador.find_element(By.XPATH,
-    '//*[//*[@id="crash-recent"]/div[2]/div[2]/span[10]').get_attribute("data-value") 
+    '//*[@id="crash-recent"]/div[2]/div[2]/span[1]/text()[1]') 
 print(last_play)
 
 #xml = html.fromstring(h)
