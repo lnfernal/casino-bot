@@ -11,7 +11,7 @@ navegador.get("https://blaze.com/pt/games/crash")
 
 #ultimas rodadas
 last_play = navegador.find_element(By.XPATH,
-    '//*[@id="crash-recent"]/div[2]/div[2]/span[1]/text()[1]') 
+    '//*[@id="crash-recent"]/div[2]/div[2]').text 
 print(last_play)
 
 #xml = html.fromstring(h)
